@@ -83,12 +83,13 @@ body {
     margin-bottom: 10px;
     text-transform: capitalize;
     color: #333;
+    width: 30%; /* Envelopper le titre dans une largeur de 30% */
 }
 
 .wrapped-text {
     font-size: 1.1em;
     color: #333;
-    width: 80%; /* Contrôlez la largeur pour l'enveloppement */
+    width: 30%; /* Envelopper le texte dans une largeur de 30% */
     line-height: 1.4; /* Ajuster l'espacement des lignes */
 }
 
@@ -120,8 +121,11 @@ body {
 
 /* Final Section */
 .final-section {
-    text-align: left;
+    text-align: left; /* Aligner le texte à gauche */
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner tous les éléments à gauche */
 }
 
 .final-section h2 {
@@ -138,6 +142,18 @@ body {
     color: #333;
     font-weight: 700; /* Mettre en gras */
     margin-top: 0; /* Supprime l'espacement supérieur pour le paragraphe */
+}
+
+/* Centered Image with Smaller Size */
+.image-item.centered {
+    text-align: center; /* Center the image */
+    margin-top: 20px; /* Optional: add some spacing above the image */
+}
+
+.small-image {
+    width: 60%; /* Réduit la taille de l'image à 60% du conteneur */
+    max-width: 400px; /* Contrôle la taille maximale pour éviter qu'elle soit trop grande */
+    height: auto; /* Laisse la hauteur s'ajuster */
 }
 
 /* Footer */
