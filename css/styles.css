@@ -122,9 +122,6 @@ body {
 .final-section {
     text-align: left;
     margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all items in this section */
 }
 
 .final-section h2 {
@@ -141,18 +138,6 @@ body {
     color: #333;
     font-weight: 700; /* Mettre en gras */
     margin-top: 0; /* Supprime l'espacement supérieur pour le paragraphe */
-}
-
-/* Centered Image */
-.image-item.centered {
-    text-align: center; /* Center the image */
-    margin-top: 20px; /* Optional: add some spacing above the image */
-}
-
-.image-item.centered img {
-    width: auto; /* Allow the width to adjust */
-    height: auto; /* Allow the height to adjust */
-    max-width: 100%; /* Ensures the image doesn't exceed the width */
 }
 
 /* Footer */
