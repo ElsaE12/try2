@@ -2,102 +2,104 @@
 
 /* General Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Ensure all elements have box-sizing property */
+    margin: 0; /* Remove all default margins */
+    padding: 0; /* Remove all default paddings */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f1d79e;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the body */
+    background-color: #f1d79e; /* Background color */
+    color: #333; /* Text color */
+    line-height: 1.6; /* Line height for text */
 }
 
-/* Container with 12-column grid */
-.container {
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-}
-
-/* Align all sections with a consistent left margin */
-.header, .first-section, .final-section {
-    grid-column: span 12;
-    margin-bottom: 50px;
-    padding-left: 20px; /* This ensures left alignment across sections */
-}
-
-/* Header */
+/* Styling for the header section */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 20px;
-}
-
-.header-content {
-    flex: 1;
+    grid-column: span 12;
+    text-align: left; /* Ensure text is aligned to the left */
+    margin-bottom: 50px;
+    padding: 20px; /* Padding for space */
+    max-width: 1200px; /* Limit the width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header h1 {
-    font-size: 3em;
+    font-size: 3em; /* Font size in em */
     margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #d28d16;
+    text-transform: uppercase; /* Text transform */
+    font-weight: 700; /* Use a non-default font weight */
+    color: #d28d16; /* Title color */
+    text-align: left; /* Ensure h1 is left-aligned */
 }
 
-.header p {
-    font-size: 1.1em;
+.description {
+    font-size: 1.1em; /* Font size in em */
+    color: #333; /* Text color */
+    max-width: 600px;
+    text-align: left; /* Ensure description is left-aligned */
 }
 
-/* Lien Instagram légèrement décalé à droite */
-.instagram-link {
-    align-self: flex-start; /* Aligne le lien au sommet */
-    margin-left: 15px; /* Ajustement pour décaler légèrement à droite */
-    margin-top: 0; /* Pour aligner verticalement avec le texte */
-}
-
-.instagram-link a {
-    color: #333;
+/* Link styles */
+a {
+    color: #333; /* Text color */
     text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.3s;
+    transition-property: color; /* Transition property for hover */
+    transition-duration: 0.3s; /* Duration of transition effect */
 }
 
-.instagram-link a:hover {
-    color: #555;
+.header a {
+    margin-left: 10px; /* Slight shift to the right for the Instagram link */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #555; /* Darker hover effect */
+}
+
+/* Main container grid */
+.container {
+    max-width: 100%;
+    padding: 0; /* Remove left and right padding */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid system */
+    gap: 20px;
+    background-color: #f4f4f4; /* Single background color */
 }
 
 /* First Section */
 .first-section {
-    text-align: left;
+    grid-column: span 12;
+    margin-bottom: 50px;
+    text-align: left; /* Align text to the left */
+    padding-left: 0; /* Remove left padding to align */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.wrapped-title {
-    font-size: 2em;
+.first-section h2 {
+    font-size: 2em; /* Font size in em */
     margin-bottom: 10px;
-    text-transform: capitalize;
-    color: #333;
-    width: 30%; /* Envelopper le titre dans une largeur de 30% */
+    text-transform: capitalize; /* Capitalize first letters */
+    color: #333; /* Text color */
+    text-align: left; /* Ensure h2 is left-aligned */
 }
 
-.wrapped-text {
-    font-size: 1.1em;
-    color: #333;
-    width: 30%; /* Envelopper le texte dans une largeur de 30% */
-    line-height: 1.4; /* Ajuster l'espacement des lignes */
+.first-section p {
+    max-width: 600px;
+    color: #333; /* Text color */
+    text-align: left; /* Ensure paragraphs are left-aligned */
 }
 
-/* Image Grid */
+/* Flexbox Image Grid */
 .image-grid {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Use display: flex */
+    justify-content: space-between; /* Use justify-content */
     gap: 15px;
+    padding: 0; /* Remove padding */
 }
 
 .image-item {
@@ -105,89 +107,74 @@ body {
     position: relative;
 }
 
+/* Image Styles */
 .image-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border: 5px solid #333;
-    transition-property: transform, border-radius;
-    transition-duration: 0.3s;
+    border: 5px solid #333; /* Border with single color */
+    transition-property: transform, border-radius; /* Use transition-property */
+    transition-duration: 0.3s; /* Use transition-duration */
 }
 
+/* Hover Effects on Images */
 .image-item img:hover {
-    transform: scale(1.05);
-    border-radius: 10px;
+    transform: scale(1.05); /* Hover scale effect */
+    border-radius: 10px; /* Rounded corners on hover */
+}
+
+/* Center the last image and give it a border */
+.centered {
+    text-align: center; /* Center align text in centered section */
+    margin: 0; /* Remove margin */
+}
+
+.centered img {
+    border: 5px solid #333; /* Border with single color */
 }
 
 /* Final Section */
 .final-section {
-    text-align: left; /* Aligner le texte à gauche */
+    grid-column: span 12;
+    text-align: left; /* Align text to the left */
     margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligner tous les éléments à gauche */
+    padding-left: 0; /* Remove left padding */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.final-section h2 {
-    font-family: 'Mulish', sans-serif;
-    font-size: 2em; /* Même taille pour le texte */
-    color: #333;
-    font-weight: 700; /* Mettre en gras */
-    margin-top: 0; /* Supprime l'espacement supérieur pour le titre */
+.final-section h2, .final-section p {
+    font-family: 'Mulish', sans-serif; /* Use Mulish font */
+    font-size: 2em; /* Font size */
+    color: #333; /* Text color */
+    text-align: left; /* Align text to the left */
 }
 
-.final-description {
-    font-family: 'Mulish', sans-serif; /* Assurer la même police */
-    font-size: 2em; /* Assurer que le texte soit de la même taille */
-    color: #333;
-    font-weight: 700; /* Mettre en gras */
-    margin-top: 0; /* Supprime l'espacement supérieur pour le paragraphe */
-}
-
-/* Centered Image with Smaller Size */
-.image-item.centered {
-    text-align: center; /* Center the image */
-    margin-top: 20px; /* Optional: add some spacing above the image */
-}
-
-.small-image {
-    width: 60%; /* Réduit la taille de l'image à 60% du conteneur */
-    max-width: 400px; /* Contrôle la taille maximale pour éviter qu'elle soit trop grande */
-    height: auto; /* Laisse la hauteur s'ajuster */
-}
-
-/* Footer */
+/* Footer Styles */
 .footer {
     grid-column: span 12;
-    background-color: #000000;
-    color: #333;
-    padding: 20px;
-    text-align: left;
+    background-color: #000000; /* Background color */
+    color: #333; /* Text color */
+    padding: 20px; /* Uniform padding */
+    text-align: left; /* Align footer text to the left */
 }
 
 /* Responsive Breakpoint for 768px */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2em; /* Adjust font-size for smaller screens */
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Adjust font-size for smaller screens */
     }
 
     .image-grid {
-        flex-direction: column;
+        flex-direction: column; /* Stack images vertically on smaller screens */
     }
 
     .image-item img {
-        height: auto;
-    }
-
-    p.description {
-        font-size: 0.9em;
-    }
-
-    .instagram-link {
-        margin-left: 0; /* Retire le décalage pour les petits écrans */
+        height: auto; /* Remove fixed height for responsiveness */
     }
 }
